@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Login UA </title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/base/_reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/login.css"> 
+    <link rel="icon" type="image/jpg" href="/assets/img/ua.svg">
+</head>
+<body>
+ <div id="contenedor">   
+
+<form name="login" id="login"> 
+     <table width="200" border="0"> 
+       <tr> 
+         <th scope="row" class="datos"><h2>Usuario</h2></th> 
+         <td><span class="cnt"> 
+           <input name="usuario" type="text" class="Input" value="" size="20" /> 
+         </span></td> 
+       </tr> 
+       <tr> 
+         <th height="33" scope="row" class="datos"><h2>Clave</h2></th> 
+         <td><span class="cnt"> 
+           <input name="password" type="password" class="Input" value="" size="20" /> 
+         </span></td> 
+         
+       </tr> 
+       <tr>
+        <td></td>
+        <td><span class="cnt"> 
+            <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/> 
+          </span></td> 
+       </tr>
+       <tr> 
+        <td></td>
+         <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Borrar" class="boton" /></th> 
+       </tr> 
+     </table> 
+</form> 
+</div>
+<script language="JavaScript"> 
+    function Login(){ 
+        var done=0; 
+        var usuario=document.login.usuario.value; 
+        var password=document.login.password.value; 
+
+        if ((usuario=="root" && password=="root00") || (usuario=="UDEA" && password=="UDEA00") ) { 
+            window.location="/quitz/index.html"; 
+        } 
+    } 
+</script> 
+
+<script language="Javascript"> 
+<!-- Begin 
+document.oncontextmenu = function(){return false} 
+// End --> 
+</script>
+</body>
+</html>
